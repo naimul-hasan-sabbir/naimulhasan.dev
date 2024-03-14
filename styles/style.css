@@ -60,21 +60,25 @@ section {
 .sec1 {
   display: none;
   transform: translateY(0) scale(1);
+  background-color: rgb(174, 205, 90);
 }
 
 .sec2 {
   display: none;
   transform: translateY(0) scale(1);
+  background-color: slateblue;
 }
 
 .sec3 {
   display: none;
   transform: translateY(0) scale(1);
+  background-color: rgb(197, 205, 90);
 }
 
 .sec4 {
   display: none;
   transform: translateY(0) scale(1);
+  background-color: rgb(165, 205, 90);
 }
 
 .sec5 {
