@@ -17,6 +17,8 @@
   --color-grey-4: #454e56;
   --color-grey-5: #2a2e35;
   --color-grey-6: #12181b;
+  --color-zonayed: #34382e;
+  --color-aryan: #0a0910;
   --br-sm-2: 14px;
   --box-shadow-1: 0 3px 15px rgba(0, 0, 0, 0.3);
 }
@@ -50,7 +52,8 @@ section {
 .section {
   transform: translateY(-100%) scale(0);
   transition: all 0.4s ease-in-out;
-  background-color: var(--color-primary);
+  // background-color: var(--color-primary);
+  background-color: var(--color-aryan);
 }
 
 .sec1 {
@@ -456,7 +459,7 @@ section {
   margin-top: 3rem;
   .blog {
     position: relative;
-    background-color: var(--color-grey-5);
+    background-color: var(--color-black);
     border-radius: 5px;
     box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
     transition: all 0.4s ease-in-out;
@@ -476,7 +479,7 @@ section {
       object-fit: cover;
       border-top-left-radius: 5px;
       border-top-right-radius: 5px;
-      filter: grayscale(100%);
+      // filter: grayscale(100%);
       transition: all 0.4s ease-in-out;
     }
     .blog-text {
