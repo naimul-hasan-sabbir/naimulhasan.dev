@@ -193,7 +193,7 @@ section {
   top: 0;
   z-index: -1;
   -webkit-clip-path: polygon(0 0, 46% 0, 79% 100%, 0% 100%);
-          clip-path: polygon(0 0, 46% 0, 79% 100%, 0% 100%);
+  clip-path: polygon(0 0, 46% 0, 79% 100%, 0% 100%);
 }
 .header-content .left-header .image {
   border-radius: var(--br-sm-2);
@@ -207,7 +207,7 @@ section {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   transition: all 0.4s ease-in-out;
   filter: grayscale(100%);
 }
@@ -442,7 +442,7 @@ section {
   width: 100%;
   height: 300px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 15px;
 }
 .portfolios .portfolio-item .hover-items {
@@ -504,53 +504,101 @@ section {
 .blogs {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 2rem;
+  grid-gap: 2.5rem;
   margin-top: 3rem;
 }
 .blogs .blog {
   position: relative;
-  background-color: var(--color-black);
-  border-radius: 5px;
-  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
-  transition: all 0.4s ease-in-out;
+  background: rgba(25, 29, 43, 0.7);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 .blogs .blog:hover {
-  transform: translateY(-5px);
-  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.3);
-  transition: all 0.4s ease-in-out;
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 16px 40px 0 rgba(31, 38, 135, 0.25);
 }
-.blogs .blog:hover img {
-  filter: grayscale(0);
-  transform: scale(1.1);
-  box-shadow: 1px 4px 20px rgba(0, 0, 0, 0.8);
-}
-.blogs .blog img {
+.blogs .blog-img-wrap {
   width: 100%;
-  height: 300px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  transition: all 0.4s ease-in-out;
+  height: 220px;
+  overflow: hidden;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+}
+.blogs .blog-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+  filter: grayscale(20%);
+}
+.blogs .blog:hover .blog-img-wrap img {
+  transform: scale(1.08);
+  filter: grayscale(0%);
 }
 .blogs .blog .blog-text {
-  margin-top: -7px;
-  padding: 1.1rem;
-  border-top: 8px solid var(--color-secondary);
+  padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+  background: rgba(25, 29, 43, 0.85);
 }
-.blogs .blog .blog-text h4 {
-  font-size: 1.5rem;
+.blogs .blog .blog-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  color: var(--color-grey-2);
   margin-bottom: 0.7rem;
-  transition: all 0.4s ease-in-out;
-  cursor: pointer;
 }
-.blogs .blog .blog-text h4:hover {
+.blogs .blog .blog-meta i {
+  margin-right: 0.4em;
   color: var(--color-secondary);
 }
+.blogs .blog .blog-text h4 {
+  font-size: 1.35rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-secondary);
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.blogs .blog .blog-text h4:hover {
+  color: var(--color-white);
+}
 .blogs .blog .blog-text p {
-  color: var(--color-grey-2);
-  line-height: 2rem;
-  padding-bottom: 1rem;
+  color: var(--color-grey-1);
+  line-height: 1.7rem;
+  margin-bottom: 1.1rem;
+}
+.blogs .blog .blog-readmore {
+  display: inline-block;
+  padding: 0.45em 1.2em;
+  background: var(--color-secondary);
+  color: var(--color-white);
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+  text-decoration: none;
+}
+.blogs .blog .blog-readmore i {
+  margin-left: 0.5em;
+}
+.blogs .blog .blog-readmore:hover {
+  background: var(--color-white);
+  color: var(--color-secondary);
+}
+
+@media screen and (max-width: 1070px) {
+  .blogs {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 700px) {
+  .blogs {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Contact Section*/
@@ -875,4 +923,4 @@ section {
   .main-title h2 .bg-text {
     font-size: 4rem;
   }
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
