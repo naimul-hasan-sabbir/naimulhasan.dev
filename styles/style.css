@@ -230,6 +230,9 @@ section {
   margin: 1.5rem 0;
   line-height: 2rem;
 }
+.header-content .right-header p {
+  margin-bottom: 2rem;
+}
 
 /* About */
 .about-container {
